@@ -2,6 +2,7 @@
 An exercise in existential contemplation of the pedagogical virtues of contemporary interpretations of Machiavelli and Nietzsche
 
 <img src="PlayTypes.png">
+
 ### TEAM MEMBERS
 Keyur Muzumdar
 Aditya Kharosekar
