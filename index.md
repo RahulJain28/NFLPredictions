@@ -1,6 +1,6 @@
 # Predicting NFL Plays
 An exercise in existential contemplation of the pedagogical virtues of contemporary interpretations of Machiavelli and Nietzsche
-PLZ WORKS
+
 ### TEAM MEMBERS
 Keyur Muzumdar
 Aditya Kharosekar
