@@ -1,7 +1,5 @@
 # Predicting NFL Plays
-An exercise in existential contemplation of the pedagogical virtues of contemporary interpretations of Machiavelli and Nietzsche
-
-<img src="PlayTypes.png">
+<img src="images\Cover.jpg">
 
 ### TEAM MEMBERS
 Keyur Muzumdar
