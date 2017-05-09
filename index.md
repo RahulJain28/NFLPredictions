@@ -33,10 +33,12 @@ A team’s offensive play-calls depend on where on the field the offense is. If 
 1. if a team was in field goal range (inside the opponents 37 yard line)
 2. if a team was close to field goal range (within 5 yards of field goal range)
 3. otherwise
+
 Offensive strategy also depends on how many yards a team has to gain to win a first down. For example, a team is more likely to pass if it is 3rd-and-8 than when it is 3rd-and-2. Therefore, we added a column called DistanceToFirst which took values according the following rules - 
 1. if distance to first down is <=2 yards
 2. if distance to first down is 3-7 yards
 3. if distance to first down is >8 yards
+
 Each team’s offensive philosophy also plays a large part in determining what they do in any given situation. To account for these differences, we incorporated each team’s passing tendencies with two features. One feature indicated the percentage that each team passed the ball out of all of its offensive plays for the previous (2014-15) season. The second feature used the test set to calculate the same percentage for the current (2015-2016) season and added it as a feature.
 We added two more features - a binary feature indicating if the team in possession were on their own side of the field, and an interaction feature between the side of the field and the 50 yard value.
 
