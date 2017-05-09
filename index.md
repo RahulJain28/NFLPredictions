@@ -21,9 +21,10 @@ We used a Kaggle dataset, Detailed NFL Play-by-Play Data 2015. This dataset cont
 
 The 63 features present in the dataset could broadly be divided into two categories - 
 * Situational - These provide information (metadata) about the play
-  * Some examples - Quarter, SideOfField, Time
+   * Some examples - Quarter, SideOfField, Time
 * Result - These provide information about the play itself
-  * Some examples - PlayType, PassLocation, Tackler1, RunGap
+   * Some examples - PlayType, PassLocation, Tackler1, RunGap
+
 As our project focused on predicting offensive plays, there were several types of plays which were not relevant to us, such as Two-Minute Warning or End of Quarter. We decided to focus on the following plays - Pass, Run, Punt, Kickoff, Onside Kick, Field Goal, and QB Kneel. After removing the other plays, we were left with 39090 plays.The distribution of these selected play types was as follows - 
 
 
@@ -43,7 +44,7 @@ We added two more features - a binary feature indicating if the team in possessi
 ##### Baseline Models
 We calculated two baseline models - a proportional model, and an Air-Raid model. The proportional model worked as follows - We divided the dataset into a train set which consisted of 65% of the instances and a test set which consisted of the other 35%. We calculated the proportion of each play in the train set and randomly predicted each play in the test set based on these proportions. For example - consider a model focused on predicting only between pass and run plays. If the train set consisted of 65% passes and 35% runs, we would randomly generate a number between 0 and 1 for each play in the test set. If the number was less than 0.65, we would predict pass and we would predict run otherwise. Over multiple runs, this model was around 36% accurate. In the Air-Raid model, we predicted pass for each play, giving us an accuracy of 49.7% in a ten-fold cross validation. This is reasonable as the dataset contained about 50% pass plays.
 
-###### Ridge Model
+##### Ridge Model
 We tested a standard ridge classifier for our first model to test accuracy with stronger regularization, and achieved 60.9 ± .399% accuracy in a ten-fold cross validation. From the classifications, we also saw that a majority of mistakes came from misclassifying runs and passes.
 
 ##### K-Nearest Neighbors
