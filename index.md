@@ -26,6 +26,7 @@ The 63 features present in the dataset could broadly be divided into two categor
    * Some examples - PlayType, PassLocation, Tackler1, RunGap
 
 As our project focused on predicting offensive plays, there were several types of plays which were not relevant to us, such as Two-Minute Warning or End of Quarter. We decided to focus on the following plays - Pass, Run, Punt, Kickoff, Onside Kick, Field Goal, and QB Kneel. After removing the other plays, we were left with 39090 plays.The distribution of these selected play types was as follows - 
+
 <img src="images\PlayType.png">
 
 ### FEATURE ENGINEERING
