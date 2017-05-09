@@ -67,6 +67,7 @@ Our XGBoost performed the best, giving us an accuracy of 74.35 ± .353% in a ten
 
 ### RESULTS 
 A qualitative validation for the models came from the feature importances-- in both the top five included time left, the score differential, and field position. These are consistent with how we, as football fans, would evaluate the situation as well. Moreover, we saw that two of the features we added-- each team’s previous season pass ratio and pass ratio up to that point in the season, were also significant predictors. 
+
 <img src="images\Performance.png">
 
 ### FUTURE WORK
