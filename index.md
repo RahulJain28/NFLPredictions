@@ -27,7 +27,7 @@ The 63 features present in the dataset could broadly be divided into two categor
 
 As our project focused on predicting offensive plays, there were several types of plays which were not relevant to us, such as Two-Minute Warning or End of Quarter. We decided to focus on the following plays - Pass, Run, Punt, Kickoff, Onside Kick, Field Goal, and QB Kneel. After removing the other plays, we were left with 39090 plays.The distribution of these selected play types was as follows - 
 
-<img src="images\PlayType.png">
+<img src="images\PlayTypes.png">
 
 ### FEATURE ENGINEERING
 A team’s offensive play-calls depend on where on the field the offense is. If a team is barely in field-goal range, it would think twice before calling a slow-developing pass play, as a sack would push them out of scoring range. Similarly, if it is third down and a team is close to getting in field goal range, it might prioritize gaining those few yards over getting into the endzone. To include these different situations, we added a new column called FieldGoalRange which could take one of the following values - 
