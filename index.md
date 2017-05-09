@@ -26,7 +26,7 @@ The 63 features present in the dataset could broadly be divided into two categor
    * Some examples - PlayType, PassLocation, Tackler1, RunGap
 
 As our project focused on predicting offensive plays, there were several types of plays which were not relevant to us, such as Two-Minute Warning or End of Quarter. We decided to focus on the following plays - Pass, Run, Punt, Kickoff, Onside Kick, Field Goal, and QB Kneel. After removing the other plays, we were left with 39090 plays.The distribution of these selected play types was as follows - 
-
+<img src="images\PlayType.png">
 
 ### FEATURE ENGINEERING
 A team’s offensive play-calls depend on where on the field the offense is. If a team is barely in field-goal range, it would think twice before calling a slow-developing pass play, as a sack would push them out of scoring range. Similarly, if it is third down and a team is close to getting in field goal range, it might prioritize gaining those few yards over getting into the endzone. To include these different situations, we added a new column called FieldGoalRange which could take one of the following values - 
@@ -57,12 +57,17 @@ We tried an MLP classifier and achieved 61.0 ± 2.00% accuracy in a ten-fold cro
 
 ##### Random Forests
 We tried a Random Forest model and achieved 71.35 ± 0.55% accuracy with 10-fold cross validation. From the confusion matrix, we can see that a substantial amount of the error from this model came from mixing up run and pass plays. The model was successful in predicting other types of play with one notable exception - this model predicted a lot more onside kicks than actually happened. This probably occurred because there weren’t many onside kicks in our dataset.
+<img src="images\RFFI.png">
+<img src="images\RFCM.png">
 
 ##### XGBoost
-Our XGBoost performed the best, giving us an accuracy of 74.35 ± .353% in a ten-fold cross validation. Similar to Random Forests, much of the error came from misclassifying runs as passes and vice-versa. However, XGBoost did a much better job in classifying kickoffs and onside kicks. 
+Our XGBoost performed the best, giving us an accuracy of 74.35 ± .353% in a ten-fold cross validation. Similar to Random Forests, much of the error came from misclassifying runs as passes and vice-versa. However, XGBoost did a much better job in classifying kickoffs and onside kicks.
+<img src="images\XGBoostFI.png">
+<img src="images\XGBoostCM.png">
 
 ### RESULTS 
 A qualitative validation for the models came from the feature importances-- in both the top five included time left, the score differential, and field position. These are consistent with how we, as football fans, would evaluate the situation as well. Moreover, we saw that two of the features we added-- each team’s previous season pass ratio and pass ratio up to that point in the season, were also significant predictors. 
+<img src="images\Performance.png">
 
 ### FUTURE WORK
 To improve on the current model, we may look into finding data on the formation of the offense. The formation the offense is lined up in can give insight into the type of play the offense will run next. For example, extra linemen may indicate a higher likelihood for a run play. Another thing to consider is the actual players on the field for a given play. Including player specific attributes, such as QB Rating or Yards per Carry could help identify key players that the offense is more likely to utilize. Lastly, an interesting addition would be to identify whether or not the game clock is running so that we can properly predict spike plays. 
